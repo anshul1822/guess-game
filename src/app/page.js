@@ -62,7 +62,7 @@ export default function Home() {
         setAge(age);
       } catch (error) {
         console.log("Error fetching data:", error);
-        setError(error.message);
+        setError(error?.response?.data?.error);
       } finally {
         setLoading(false);
       }
